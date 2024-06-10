@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service Agreement</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        padding: 20px;
+    }
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    #terms {
+        max-height: 200px;
+        overflow-y: auto;
+        border: 1px solid #ccc;
+        padding: 10px;
+    }
+    .button{
+        background-color: black;
+        text-decoration: none;
+        color: azure;
+        padding: 7px;
+        border-radius: 5px;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <h2>Terms and Agreement</h2>
+        <div id="terms">
+                By using this website, you agree that it is provided solely for educational purposes. The content on this website is for informational and learning purposes only. The materials presented here are not guaranteed to be accurate, complete, or up-to-date. The website owner and creators do not accept any responsibility for any misunderstandings, misinterpretations, or misuse of the information presented on this site. Users are solely responsible for how they use the information and tools provided. By accessing this website, you agree that the website owner and creators are not liable for any damages or consequences arising from the use or misuse of this website.</p>
+        </div>
+        <br>
+        <label>
+            <input type="checkbox" id="agreeCheckbox">
+            I have read and agree to the Terms of Service
+        </label>
+        <br><br>
+        <a class="button" id="proceedLink" href="" class="disabled">Proceed to Website</a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const agreeCheckbox = document.getElementById('agreeCheckbox');
+            const proceedLink = document.getElementById('proceedLink');
+
+            // Enable link when checkbox is checked
+            agreeCheckbox.addEventListener('change', function() {
+                if (this.checked) {
+                    proceedLink.classList.remove('disabled');
+                    proceedLink.href = 'massar-demo/index.html'; // Replace with your website URL
+                } else {
+                    proceedLink.classList.add('disabled');
+                    proceedLink.removeAttribute('href');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
